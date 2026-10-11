@@ -1,0 +1,34 @@
+﻿# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Cache y archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Almacenamiento local de MLflow
+mlflow.db
+mlruns/
+mlartifacts/
+
+# Resultados regenerables del script
+outputs/
+
+# Editores
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.log

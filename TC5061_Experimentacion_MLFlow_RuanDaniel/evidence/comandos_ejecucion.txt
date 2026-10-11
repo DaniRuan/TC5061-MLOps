@@ -1,0 +1,16 @@
+﻿Ejecución por defecto:
+python src/train.py
+
+Corridas comparadas:
+python src/train.py --C 0.01 --solver lbfgs --max-iter 1000 --tol 0.0001 --random-state 42 --run-name C001_lbfgs
+python src/train.py --C 0.1 --solver lbfgs --max-iter 1000 --tol 0.0001 --random-state 42 --run-name C01_lbfgs
+python src/train.py --C 1.0 --solver lbfgs --max-iter 1000 --tol 0.0001 --random-state 42 --run-name C1_lbfgs_baseline
+python src/train.py --C 10.0 --solver lbfgs --max-iter 1000 --tol 0.0001 --random-state 42 --run-name C10_lbfgs
+python src/train.py --C 1.0 --solver liblinear --max-iter 1500 --tol 0.001 --random-state 42 --run-name C1_liblinear
+
+Prueba de reproducibilidad:
+python src/train.py --C 1.0 --solver lbfgs --max-iter 1000 --tol 0.0001 --random-state 42 --run-name reproducibility_A
+python src/train.py --C 1.0 --solver lbfgs --max-iter 1000 --tol 0.0001 --random-state 42 --run-name reproducibility_B
+
+Interfaz de MLflow:
+mlflow server --port 5000 --backend-store-uri sqlite:///mlflow.db
